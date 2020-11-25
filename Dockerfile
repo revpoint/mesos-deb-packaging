@@ -9,8 +9,4 @@ RUN gem install fpm
 
 WORKDIR /mesos-deb-packaging
 ENV MAKEFLAGS=-j8
-CMD [
-  "./build_mesos",
-  "--repo", "https://gitbox.apache.org/repos/asf/mesos.git?tag=1.7.3",
-  "--configure-flags", "CXXFLAGS=-Wno-error=parentheses --disable-python"
-]
+CMD ["./build_mesos", "--repo", "https://gitbox.apache.org/repos/asf/mesos.git?tag=1.7.3", "--configure-flags", "CXXFLAGS=-Wno-error=parentheses --disable-python"]
