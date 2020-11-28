@@ -4,6 +4,14 @@ Build scripts to create Apache Mesos packages with [FPM](https://github.com/jord
 
 Apache Mesos is a cluster manager that provides efficient resource isolation and sharing across distributed applications, or frameworks. It can run Hadoop, MPI, Hypertable, Spark (a new framework for low-latency interactive and iterative jobs), and other applications. Currently is in the Apache Incubator and going through rapid development, though stable enough for a production usage. See [Mesos website](http://incubator.apache.org/mesos/) for more details.
 
+# Running in Docker
+To build docker image with all requirements, set the environment variable `MESOS_REPO_VERSION` and run the command `make docker`.
+
+```bash
+export MESOS_REPO_VERSION=1.8.0
+make docker
+```
+
 ## Packaging Requirements
 
 ```bash
