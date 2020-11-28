@@ -13,7 +13,7 @@ build:
 .PHONY: docker
 docker:
 	docker build -t mesos-deb-packaging .
-	docker run -it -v $(PWD):/mesos-deb-packaging mesos-deb-packaging
+	docker run -it -e MESOS_REPO_VERSION=$(MESOS_REPO_VERSION) -v $(PWD):/mesos-deb-packaging mesos-deb-packaging
 
 .PHONY: dist.tgz
 dist.tgz:
